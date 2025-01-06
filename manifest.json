@@ -3,12 +3,13 @@
   "name": "Deshabilitar Productos sin Stock",
   "version": "1.0",
   "description": "Deshabilita los productos con stock 0 y cambia su color de fondo.",
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
   "content_scripts": [
     {
-      "matches": ["https://pos.contabilium.com/*"], 
+      "matches": [
+        "https://pos.contabilium.com/*",
+        "https://app.contabilium.com/comprobantes.aspx"
+      ],
       "js": ["content.js"],
       "run_at": "document_idle"
     }
